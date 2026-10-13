@@ -96,7 +96,7 @@ ASCII-styled official receipt saved to disk.
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/lustradetail.git
+git clone https://github.com/ZEB3Z/lustradetail.git
 cd lustradetail
 
 # 2. (optional but recommended) create a virtual environment
