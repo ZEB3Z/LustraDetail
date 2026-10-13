@@ -1,0 +1,49 @@
+{
+  "next_id": 5,
+  "records": [
+    {
+      "id": 1,
+      "customer_id": 1,
+      "plate": "ABC 1234",
+      "make": "Toyota",
+      "model": "Vios",
+      "year": 2020,
+      "color": "White",
+      "type": "sedan",
+      "notes": ""
+    },
+    {
+      "id": 2,
+      "customer_id": 2,
+      "plate": "XYZ 5678",
+      "make": "Toyota",
+      "model": "Hilux",
+      "year": 2019,
+      "color": "Gray",
+      "type": "pickup",
+      "notes": ""
+    },
+    {
+      "id": 3,
+      "customer_id": 3,
+      "plate": "MTR 4321",
+      "make": "Honda",
+      "model": "Click 160",
+      "year": 2022,
+      "color": "Red",
+      "type": "motorcycle",
+      "notes": ""
+    },
+    {
+      "id": 4,
+      "customer_id": 4,
+      "plate": "SUV 9001",
+      "make": "Mitsubishi",
+      "model": "Montero",
+      "year": 2021,
+      "color": "Black",
+      "type": "suv",
+      "notes": "Dark paint - swirls show easily"
+    }
+  ]
+}

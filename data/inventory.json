@@ -1,0 +1,37 @@
+[
+  {
+    "id": "SHMP01",
+    "name": "Car Shampoo",
+    "unit": "L",
+    "stock": 20.0,
+    "reorder_level": 3.0
+  },
+  {
+    "id": "MICF01",
+    "name": "Microfiber Towels",
+    "unit": "pcs",
+    "stock": 50.0,
+    "reorder_level": 10.0
+  },
+  {
+    "id": "WAXX01",
+    "name": "Carnauba Wax",
+    "unit": "kg",
+    "stock": 5.0,
+    "reorder_level": 1.0
+  },
+  {
+    "id": "INTC01",
+    "name": "Interior Cleaner",
+    "unit": "L",
+    "stock": 10.0,
+    "reorder_level": 2.0
+  },
+  {
+    "id": "CERM01",
+    "name": "Ceramic Coating Kit",
+    "unit": "kits",
+    "stock": 3.0,
+    "reorder_level": 1.0
+  }
+]

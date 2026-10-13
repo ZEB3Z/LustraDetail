@@ -1,0 +1,391 @@
+{
+  "next_id": 8,
+  "records": [
+    {
+      "customer_id": 1,
+      "vehicle_id": 1,
+      "service_ids": [
+        "SVC001",
+        "SVC002"
+      ],
+      "add_on_ids": [],
+      "package_id": "",
+      "scheduled_start": "2026-10-12 09:00",
+      "scheduled_end": "2026-10-12 11:45",
+      "status": "PAID",
+      "price_breakdown": {
+        "vehicle_type": "sedan",
+        "items": [
+          {
+            "kind": "service",
+            "id": "SVC001",
+            "name": "Basic Wash",
+            "price": 350.0
+          },
+          {
+            "kind": "service",
+            "id": "SVC002",
+            "name": "Interior Deep Clean",
+            "price": 1500.0
+          }
+        ],
+        "materials": [
+          {
+            "item_id": "INTC01",
+            "qty": 0.3
+          },
+          {
+            "item_id": "MICF01",
+            "qty": 5.0
+          },
+          {
+            "item_id": "SHMP01",
+            "qty": 0.2
+          }
+        ],
+        "subtotal": 1850.0,
+        "package_id": "",
+        "package_discount_amount": 0.0,
+        "promo_code": "",
+        "promo_discount_amount": 0.0,
+        "total": 1850.0,
+        "duration_minutes": 165
+      },
+      "promo_code": "",
+      "deposit": 0.0,
+      "notes": "",
+      "created_at": "2026-10-11 09:00",
+      "completed_at": "2026-10-12 11:45",
+      "payment": {
+        "method": "gcash",
+        "amount": 1850.0,
+        "balance": 1850.0,
+        "deposit": 0.0,
+        "paid_at": "2026-10-12 11:45",
+        "cashier": "Mara Santos",
+        "receipt_file": ""
+      },
+      "id": 1
+    },
+    {
+      "customer_id": 2,
+      "vehicle_id": 2,
+      "service_ids": [
+        "SVC003"
+      ],
+      "add_on_ids": [],
+      "package_id": "",
+      "scheduled_start": "2026-10-12 14:00",
+      "scheduled_end": "2026-10-12 15:45",
+      "status": "PAID",
+      "price_breakdown": {
+        "vehicle_type": "pickup",
+        "items": [
+          {
+            "kind": "service",
+            "id": "SVC003",
+            "name": "Wax & Polish",
+            "price": 1500.0
+          }
+        ],
+        "materials": [
+          {
+            "item_id": "MICF01",
+            "qty": 2.0
+          },
+          {
+            "item_id": "WAXX01",
+            "qty": 0.15
+          }
+        ],
+        "subtotal": 1500.0,
+        "package_id": "",
+        "package_discount_amount": 0.0,
+        "promo_code": "",
+        "promo_discount_amount": 0.0,
+        "total": 1500.0,
+        "duration_minutes": 105
+      },
+      "promo_code": "",
+      "deposit": 0.0,
+      "notes": "",
+      "created_at": "2026-10-11 14:00",
+      "completed_at": "2026-10-12 15:45",
+      "payment": {
+        "method": "gcash",
+        "amount": 1500.0,
+        "balance": 1500.0,
+        "deposit": 0.0,
+        "paid_at": "2026-10-12 15:45",
+        "cashier": "Mara Santos",
+        "receipt_file": ""
+      },
+      "id": 2
+    },
+    {
+      "customer_id": 3,
+      "vehicle_id": 3,
+      "service_ids": [
+        "SVC001"
+      ],
+      "add_on_ids": [],
+      "package_id": "",
+      "scheduled_start": "2026-10-13 10:00",
+      "scheduled_end": "2026-10-13 10:30",
+      "status": "DONE",
+      "price_breakdown": {
+        "vehicle_type": "motorcycle",
+        "items": [
+          {
+            "kind": "service",
+            "id": "SVC001",
+            "name": "Basic Wash",
+            "price": 250.0
+          }
+        ],
+        "materials": [
+          {
+            "item_id": "MICF01",
+            "qty": 2.0
+          },
+          {
+            "item_id": "SHMP01",
+            "qty": 0.2
+          }
+        ],
+        "subtotal": 250.0,
+        "package_id": "",
+        "package_discount_amount": 0.0,
+        "promo_code": "",
+        "promo_discount_amount": 0.0,
+        "total": 250.0,
+        "duration_minutes": 30
+      },
+      "promo_code": "",
+      "deposit": 0.0,
+      "notes": "",
+      "created_at": "2026-10-12 10:00",
+      "completed_at": "2026-10-13 10:30",
+      "payment": {},
+      "id": 3
+    },
+    {
+      "customer_id": 4,
+      "vehicle_id": 4,
+      "service_ids": [
+        "SVC001",
+        "SVC003"
+      ],
+      "add_on_ids": [],
+      "package_id": "PKG002",
+      "scheduled_start": "2026-10-13 13:00",
+      "scheduled_end": "2026-10-13 15:45",
+      "status": "BOOKED",
+      "price_breakdown": {
+        "vehicle_type": "suv",
+        "items": [
+          {
+            "kind": "service",
+            "id": "SVC001",
+            "name": "Basic Wash",
+            "price": 450.0
+          },
+          {
+            "kind": "service",
+            "id": "SVC003",
+            "name": "Wax & Polish",
+            "price": 1400.0
+          }
+        ],
+        "materials": [
+          {
+            "item_id": "MICF01",
+            "qty": 4.0
+          },
+          {
+            "item_id": "SHMP01",
+            "qty": 0.2
+          },
+          {
+            "item_id": "WAXX01",
+            "qty": 0.15
+          }
+        ],
+        "subtotal": 1850.0,
+        "package_id": "PKG002",
+        "package_discount_amount": 185.0,
+        "promo_code": "",
+        "promo_discount_amount": 0.0,
+        "total": 1665.0,
+        "duration_minutes": 165
+      },
+      "promo_code": "",
+      "deposit": 1000.0,
+      "notes": "",
+      "created_at": "2026-10-12 13:00",
+      "completed_at": "",
+      "payment": {},
+      "id": 4
+    },
+    {
+      "customer_id": 1,
+      "vehicle_id": 1,
+      "service_ids": [
+        "SVC006"
+      ],
+      "add_on_ids": [],
+      "package_id": "",
+      "scheduled_start": "2026-10-14 09:00",
+      "scheduled_end": "2026-10-14 13:00",
+      "status": "BOOKED",
+      "price_breakdown": {
+        "vehicle_type": "sedan",
+        "items": [
+          {
+            "kind": "service",
+            "id": "SVC006",
+            "name": "Ceramic Coating",
+            "price": 12000.0
+          }
+        ],
+        "materials": [
+          {
+            "item_id": "CERM01",
+            "qty": 1.0
+          },
+          {
+            "item_id": "MICF01",
+            "qty": 4.0
+          }
+        ],
+        "subtotal": 12000.0,
+        "package_id": "",
+        "package_discount_amount": 0.0,
+        "promo_code": "",
+        "promo_discount_amount": 0.0,
+        "total": 12000.0,
+        "duration_minutes": 240
+      },
+      "promo_code": "",
+      "deposit": 1000.0,
+      "notes": "",
+      "created_at": "2026-10-13 09:00",
+      "completed_at": "",
+      "payment": {},
+      "id": 5
+    },
+    {
+      "customer_id": 2,
+      "vehicle_id": 2,
+      "service_ids": [
+        "SVC009"
+      ],
+      "add_on_ids": [
+        "ADD003"
+      ],
+      "package_id": "",
+      "scheduled_start": "2026-10-14 15:00",
+      "scheduled_end": "2026-10-14 16:30",
+      "status": "BOOKED",
+      "price_breakdown": {
+        "vehicle_type": "pickup",
+        "items": [
+          {
+            "kind": "service",
+            "id": "SVC009",
+            "name": "Odor Removal",
+            "price": 1300.0
+          },
+          {
+            "kind": "add_on",
+            "id": "ADD003",
+            "name": "Tire Shine",
+            "price": 200.0
+          }
+        ],
+        "materials": [
+          {
+            "item_id": "INTC01",
+            "qty": 0.1
+          },
+          {
+            "item_id": "MICF01",
+            "qty": 1.0
+          }
+        ],
+        "subtotal": 1500.0,
+        "package_id": "",
+        "package_discount_amount": 0.0,
+        "promo_code": "LUSTRA10",
+        "promo_discount_amount": 150.0,
+        "total": 1350.0,
+        "duration_minutes": 90
+      },
+      "promo_code": "LUSTRA10",
+      "deposit": 0.0,
+      "notes": "",
+      "created_at": "2026-10-13 15:00",
+      "completed_at": "",
+      "payment": {},
+      "id": 6
+    },
+    {
+      "customer_id": 4,
+      "vehicle_id": 4,
+      "service_ids": [
+        "SVC004",
+        "SVC005"
+      ],
+      "add_on_ids": [],
+      "package_id": "",
+      "scheduled_start": "2026-10-15 11:00",
+      "scheduled_end": "2026-10-15 12:45",
+      "status": "BOOKED",
+      "price_breakdown": {
+        "vehicle_type": "suv",
+        "items": [
+          {
+            "kind": "service",
+            "id": "SVC004",
+            "name": "Engine Bay Cleaning",
+            "price": 900.0
+          },
+          {
+            "kind": "service",
+            "id": "SVC005",
+            "name": "Headlight Restoration",
+            "price": 900.0
+          }
+        ],
+        "materials": [
+          {
+            "item_id": "INTC01",
+            "qty": 0.2
+          },
+          {
+            "item_id": "MICF01",
+            "qty": 2.0
+          },
+          {
+            "item_id": "WAXX01",
+            "qty": 0.05
+          }
+        ],
+        "subtotal": 1800.0,
+        "package_id": "",
+        "package_discount_amount": 0.0,
+        "promo_code": "",
+        "promo_discount_amount": 0.0,
+        "total": 1800.0,
+        "duration_minutes": 105
+      },
+      "promo_code": "",
+      "deposit": 0.0,
+      "notes": "",
+      "created_at": "2026-10-14 11:00",
+      "completed_at": "",
+      "payment": {},
+      "id": 7
+    }
+  ]
+}

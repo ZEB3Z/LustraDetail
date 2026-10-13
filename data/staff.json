@@ -1,0 +1,32 @@
+{
+  "next_id": 4,
+  "records": [
+    {
+      "id": 1,
+      "name": "Ramon Villanueva",
+      "role": "admin",
+      "username": "admin",
+      "password": "admin123",
+      "phone": "09170000001",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Alwin Mercado",
+      "role": "detailer",
+      "username": "alwin",
+      "password": "detail123",
+      "phone": "09170000002",
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Mara Santos",
+      "role": "cashier",
+      "username": "cashier",
+      "password": "cash123",
+      "phone": "09170000003",
+      "active": true
+    }
+  ]
+}

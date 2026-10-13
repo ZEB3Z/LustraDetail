@@ -1,0 +1,353 @@
+{
+  "services": [
+    {
+      "id": "SVC001",
+      "name": "Basic Wash",
+      "description": "Exterior hand wash, rinse and dry.",
+      "prices": {
+        "sedan": 350,
+        "suv": 450,
+        "pickup": 500,
+        "van": 550,
+        "motorcycle": 250
+      },
+      "durations": {
+        "sedan": 45,
+        "suv": 60,
+        "pickup": 60,
+        "van": 75,
+        "motorcycle": 30
+      },
+      "materials": [
+        {
+          "item_id": "SHMP01",
+          "qty": 0.2
+        },
+        {
+          "item_id": "MICF01",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "id": "SVC002",
+      "name": "Interior Deep Clean",
+      "description": "Vacuum, shampoo upholstery, dashboard and glass.",
+      "prices": {
+        "sedan": 1500,
+        "suv": 1800,
+        "pickup": 1900,
+        "van": 2200,
+        "motorcycle": 900
+      },
+      "durations": {
+        "sedan": 120,
+        "suv": 150,
+        "pickup": 150,
+        "van": 180,
+        "motorcycle": 60
+      },
+      "materials": [
+        {
+          "item_id": "MICF01",
+          "qty": 3
+        },
+        {
+          "item_id": "INTC01",
+          "qty": 0.3
+        }
+      ]
+    },
+    {
+      "id": "SVC003",
+      "name": "Wax & Polish",
+      "description": "Machine polish with a protective carnauba wax.",
+      "prices": {
+        "sedan": 1200,
+        "suv": 1400,
+        "pickup": 1500,
+        "van": 1700,
+        "motorcycle": 800
+      },
+      "durations": {
+        "sedan": 90,
+        "suv": 105,
+        "pickup": 105,
+        "van": 120,
+        "motorcycle": 60
+      },
+      "materials": [
+        {
+          "item_id": "WAXX01",
+          "qty": 0.15
+        },
+        {
+          "item_id": "MICF01",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "id": "SVC004",
+      "name": "Engine Bay Cleaning",
+      "description": "Degrease and dress the engine bay.",
+      "prices": {
+        "sedan": 800,
+        "suv": 900,
+        "pickup": 1000,
+        "van": 1100,
+        "motorcycle": 600
+      },
+      "durations": {
+        "sedan": 60,
+        "suv": 60,
+        "pickup": 75,
+        "van": 75,
+        "motorcycle": 45
+      },
+      "materials": [
+        {
+          "item_id": "INTC01",
+          "qty": 0.2
+        },
+        {
+          "item_id": "MICF01",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "SVC005",
+      "name": "Headlight Restoration",
+      "description": "Sand, polish and seal cloudy headlights.",
+      "prices": {
+        "sedan": 900,
+        "suv": 900,
+        "pickup": 1000,
+        "van": 1000,
+        "motorcycle": 500
+      },
+      "durations": {
+        "sedan": 45,
+        "suv": 45,
+        "pickup": 45,
+        "van": 60,
+        "motorcycle": 30
+      },
+      "materials": [
+        {
+          "item_id": "WAXX01",
+          "qty": 0.05
+        },
+        {
+          "item_id": "MICF01",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "SVC006",
+      "name": "Ceramic Coating",
+      "description": "Multi-year ceramic paint protection.",
+      "prices": {
+        "sedan": 12000,
+        "suv": 15000,
+        "pickup": 16000,
+        "van": 18000,
+        "motorcycle": 8000
+      },
+      "durations": {
+        "sedan": 240,
+        "suv": 300,
+        "pickup": 300,
+        "van": 360,
+        "motorcycle": 180
+      },
+      "materials": [
+        {
+          "item_id": "CERM01",
+          "qty": 1
+        },
+        {
+          "item_id": "MICF01",
+          "qty": 4
+        }
+      ]
+    },
+    {
+      "id": "SVC007",
+      "name": "Paint Correction",
+      "description": "Removes swirls and light scratches.",
+      "prices": {
+        "sedan": 5000,
+        "suv": 6000,
+        "pickup": 6500,
+        "van": 7500,
+        "motorcycle": 3500
+      },
+      "durations": {
+        "sedan": 240,
+        "suv": 270,
+        "pickup": 270,
+        "van": 300,
+        "motorcycle": 180
+      },
+      "materials": [
+        {
+          "item_id": "WAXX01",
+          "qty": 0.2
+        },
+        {
+          "item_id": "MICF01",
+          "qty": 3
+        }
+      ]
+    },
+    {
+      "id": "SVC008",
+      "name": "Leather Treatment",
+      "description": "Deep clean and condition leather seats.",
+      "prices": {
+        "sedan": 1800,
+        "suv": 2000,
+        "pickup": 2200,
+        "van": 2500,
+        "motorcycle": 1000
+      },
+      "durations": {
+        "sedan": 90,
+        "suv": 105,
+        "pickup": 105,
+        "van": 120,
+        "motorcycle": 45
+      },
+      "materials": [
+        {
+          "item_id": "INTC01",
+          "qty": 0.2
+        },
+        {
+          "item_id": "MICF01",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "id": "SVC009",
+      "name": "Odor Removal",
+      "description": "Ozone and steam treatment for stubborn smells.",
+      "prices": {
+        "sedan": 1000,
+        "suv": 1200,
+        "pickup": 1300,
+        "van": 1500,
+        "motorcycle": 700
+      },
+      "durations": {
+        "sedan": 60,
+        "suv": 75,
+        "pickup": 75,
+        "van": 90,
+        "motorcycle": 45
+      },
+      "materials": [
+        {
+          "item_id": "INTC01",
+          "qty": 0.1
+        },
+        {
+          "item_id": "MICF01",
+          "qty": 1
+        }
+      ]
+    }
+  ],
+  "add_ons": [
+    {
+      "id": "ADD001",
+      "name": "Air Freshener",
+      "price": 100,
+      "duration": 5,
+      "materials": []
+    },
+    {
+      "id": "ADD002",
+      "name": "Wheel & Rim Detail",
+      "price": 300,
+      "duration": 20,
+      "materials": [
+        {
+          "item_id": "MICF01",
+          "qty": 1
+        }
+      ]
+    },
+    {
+      "id": "ADD003",
+      "name": "Tire Shine",
+      "price": 200,
+      "duration": 15,
+      "materials": []
+    },
+    {
+      "id": "ADD004",
+      "name": "Glass Water Repellent",
+      "price": 350,
+      "duration": 20,
+      "materials": []
+    },
+    {
+      "id": "ADD005",
+      "name": "Pet Hair Removal",
+      "price": 400,
+      "duration": 30,
+      "materials": []
+    }
+  ],
+  "packages": [
+    {
+      "id": "PKG001",
+      "name": "Fresh Start",
+      "description": "Wash + interior deep clean.",
+      "service_ids": [
+        "SVC001",
+        "SVC002"
+      ],
+      "discount_percent": 10
+    },
+    {
+      "id": "PKG002",
+      "name": "Showroom Shine",
+      "description": "Wash + wax & polish.",
+      "service_ids": [
+        "SVC001",
+        "SVC003"
+      ],
+      "discount_percent": 10
+    },
+    {
+      "id": "PKG003",
+      "name": "Full Works",
+      "description": "Wash, interior, wax and leather treatment.",
+      "service_ids": [
+        "SVC001",
+        "SVC002",
+        "SVC003",
+        "SVC008"
+      ],
+      "discount_percent": 15
+    }
+  ],
+  "promos": [
+    {
+      "code": "LUSTRA10",
+      "description": "10% off your booking",
+      "discount_percent": 10
+    },
+    {
+      "code": "WELCOME5",
+      "description": "5% welcome discount",
+      "discount_percent": 5
+    }
+  ]
+}

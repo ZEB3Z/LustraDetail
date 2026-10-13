@@ -1,0 +1,55 @@
+{
+  "next_id": 4,
+  "records": [
+    {
+      "vehicle_id": 1,
+      "appointment_id": 1,
+      "completed_at": "2026-10-12 11:45",
+      "services": [
+        {
+          "id": "SVC001",
+          "name": "Basic Wash",
+          "price": 350.0
+        },
+        {
+          "id": "SVC002",
+          "name": "Interior Deep Clean",
+          "price": 1500.0
+        }
+      ],
+      "total_price": 1850.0,
+      "paid": true,
+      "id": 1
+    },
+    {
+      "vehicle_id": 2,
+      "appointment_id": 2,
+      "completed_at": "2026-10-12 15:45",
+      "services": [
+        {
+          "id": "SVC003",
+          "name": "Wax & Polish",
+          "price": 1500.0
+        }
+      ],
+      "total_price": 1500.0,
+      "paid": true,
+      "id": 2
+    },
+    {
+      "vehicle_id": 3,
+      "appointment_id": 3,
+      "completed_at": "2026-10-13 10:30",
+      "services": [
+        {
+          "id": "SVC001",
+          "name": "Basic Wash",
+          "price": 250.0
+        }
+      ],
+      "total_price": 250.0,
+      "paid": false,
+      "id": 3
+    }
+  ]
+}
