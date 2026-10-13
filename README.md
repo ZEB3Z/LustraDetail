@@ -352,8 +352,8 @@ requirements, and open an issue first for big changes.
 
 ## 👥 Authors
 
-- **Ericksson Brutas** — [GitHub](https://github.com/)
-- **Alwin Benitez** — [GitHub](https://github.com/)
+- **Ericksson Brutas** — [GitHub](https://github.com/ZEB3Z)
+- **Alwin Benitez** — [GitHub](https://github.com/alwincroissant)
 
 Made with soap, microfiber, and a lot of `print()` statements for our
 programming finals project. 🚗✨
