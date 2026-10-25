@@ -73,6 +73,10 @@ def test_deposit_cannot_exceed_total(stack, tomorrow_at):
 
 
 def test_walk_in_starts_now(stack):
+    # Clear the demo bookings so the result does not depend on the time of day
+    # the suite runs at (a demo job may be scheduled around "now").
+    for existing in stack.bookings.with_status(config.STATUS_BOOKED):
+        stack.bookings.cancel(existing.id)
     appt = stack.bookings.create_booking(1, 1, ["SVC001"], start_dt=dtu.now())
     assert appt.status == config.STATUS_BOOKED
 

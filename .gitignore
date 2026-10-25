@@ -5,3 +5,4 @@ __pycache__/
 *.tmp
 *.bak
 receipts/*.txt
+.lustra_ui.json

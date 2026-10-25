@@ -1,33 +1,19 @@
 <div align="center">
 
-```
-+============================================================+
-|                                                            |
-|        L  U  S  T  R  A  D  E  T  A  I  L                  |
-|                A U T O    C A R E                          |
-|                                                            |
-|                     ______                                 |
-|                    /|_||_\`.____                           |
-|                   (   _    _  _ \                          |
-|                   =`-(_)--(_)-'                             |
-|                                                            |
-|          "Drive in dirty. Drive out dazzling."             |
-|                                                            |
-+============================================================+
-```
+<img src="docs/screenshots/01-login.png" alt="LustraDetail login screen" width="820">
 
 # LustraDetail Auto Care
 
-### A complete terminal-based management system for a one-bay auto detailing shop
+### A complete desktop management system for a one-bay auto detailing shop
 
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Dependencies](https://img.shields.io/badge/dependencies-none-success)
 ![Tests](https://img.shields.io/badge/tests-pytest-brightgreen)
-![UI](https://img.shields.io/badge/UI-terminal%20%2F%20ASCII-artistic)
+![UI](https://img.shields.io/badge/UI-Tkinter-0E7490)
 
 **Services priced per vehicle type • conflict-free scheduling • job tracking •
 inventory with auto-deduction • official receipts • sales reports • staff roles •
-customer self-service portal**
+customer self-service portal • light & dark themes**
 
 *Built as a finals class project by Ericksson Brutas and Alwin Benitez.*
 
@@ -47,7 +33,7 @@ customer self-service portal**
 8. [Scheduling Rules](#-scheduling-rules)
 9. [Data Files](#-data-files)
 10. [Running the Tests](#-running-the-tests)
-11. [Roadmap: Tkinter GUI](#-roadmap-tkinter-gui)
+11. [The Tkinter Interface](#-the-tkinter-interface)
 12. [Contributing](#-contributing)
 13. [Authors](#-authors)
 
@@ -56,13 +42,13 @@ customer self-service portal**
 ## 📖 What is LustraDetail?
 
 **LustraDetail Auto Care** is a fictional one-bay detailing shop in Quezon City.
-This project is the shop's entire back office, squeezed into a clean, menu-driven
-terminal application written in **pure Python — zero third-party packages**.
+This project is the shop's entire back office, wrapped in a clean, modern
+desktop application written in **pure Python and Tkinter — zero third-party packages**.
 
 Staff log in to run the shop; customers log in with just their phone number to
 book their own appointments. Every business rule — pricing, conflicts, stock,
 payments — is guarded by fail-safes, and every completed job produces an
-ASCII-styled official receipt saved to disk.
+official receipt saved to disk.
 
 > *Drive in dirty. Drive out dazzling.*
 
@@ -77,10 +63,11 @@ ASCII-styled official receipt saved to disk.
 | **Job pipeline** | `BOOKED → IN PROGRESS → DONE → PAID` with guarded transitions — every step validated |
 | **Customers & vehicles** | Full registry (contact, plate, make/model/year/color, notes), duplicate-phone/plate protection, per-vehicle **service history** |
 | **Inventory** | Chemicals, towels, coatings and film; **stock auto-deducted when a job starts**, booking blocked when stock is insufficient, low-stock alerts, restocking |
-| **Payments** | Deposits at booking, balance checkout, cash change computation, GCash / bank / card support, **itemized ASCII receipt per order** |
-| **Reports** | Daily sales, top services, bay utilization (with ASCII progress bar), shop summary |
-| **Staff** | Three roles (**admin / detailer / cashier**) with menu gating, staff management (add, activate/deactivate) |
+| **Payments** | Deposits at booking, balance checkout, cash change computation, GCash / bank / card support, **itemized receipt per order** |
+| **Reports** | Daily sales, top services, bay utilization, shop summary — with live charts on the dashboard |
+| **Staff** | Three roles (**admin / detailer / cashier**) with role-based sidebar menus, staff management (add, activate/deactivate) |
 | **Customer portal** | Self-service: browse prices, book, reschedule, cancel, view vehicle history |
+| **Interface** | Animated splash screen, sidebar navigation, a **light / dark theme toggle** (remembered between runs), step-by-step booking wizard, toast notifications, HiDPI-aware sizing |
 | **Storage** | JSON files with **atomic writes and automatic `.bak` corruption recovery** |
 
 ---
@@ -89,8 +76,9 @@ ASCII-styled official receipt saved to disk.
 
 ### Requirements
 
-- **Python 3.10 or newer** (3.13 recommended) — tkinter ships with it, so the future GUI upgrade needs nothing extra
+- **Python 3.10 or newer** (3.12 recommended) with **Tkinter** — it ships with the python.org installers for Windows and macOS. On Linux you may need `sudo apt install python3-tk` (Debian/Ubuntu) or `sudo dnf install python3-tkinter` (Fedora)
 - No `pip install` needed — the app uses **only the standard library**
+- A screen of at least 1180 × 720 (the window scales to fit smaller displays)
 
 ### Setup
 
@@ -115,7 +103,7 @@ are relative to *today*, so dashboards and reports always have something to show
 
 | Command | What it does |
 |---|---|
-| `python main.py` | Starts the application (auto-seeds demo data on first run) |
+| `python main.py` | Opens the desktop app (auto-seeds demo data on first run) |
 | `python main.py --reseed` | Wipes and rebuilds all data files fresh — handy before a demo/defense |
 | `python main.py --help` | Shows usage |
 
@@ -137,38 +125,14 @@ are relative to *today*, so dashboards and reports always have something to show
 
 ## 👀 A Peek Inside
 
-```
-+============================================================+
-|                                                            |
-|        L  U  S  T  R  A  D  E  T  A  I  L                  |
-|                A U T O    C A R E                          |
-|                                                            |
-|          "Drive in dirty. Drive out dazzling."              |
-|                                                            |
-+============================================================+
-  LustraDetail Auto Care  |  version 1.0.0
-
-  [1] Staff login
-  [2] Customer portal
-  [3] About this system
-  [0] Exit
-  Choose: 1
-
-  STAFF LOGIN  (3 attempt(s) left)
-  Username: admin
-  Password: admin123
-  [+] Welcome back, Ericksson Brutas (admin).
-
-== [ DASHBOARD - TODAY ]======================================
-ID  Scheduled            Customer        Vehicle                    Service(s)                 Status    Total
---  -------------------  --------------  -------------------------  --------------------------  --------  ---------
-3   2025-06-05 10:00     Carlo Reyes     Honda Click 125i (m...)    Basic Wash                 DONE      Php 250.00
-4   2025-06-05 13:00     Ana Lim         Mitsubishi Montero...      Exterior Detailing (+...  BOOKED    Php 4,950.00
-
-  Today: 2 booked, 0 in progress, 1 done, 0 paid.
-  [!] 1 finished job(s) awaiting checkout.
-  [+] Inventory levels look healthy.
-```
+| | |
+|---|---|
+| ![Dashboard](docs/screenshots/02-dashboard.png) | ![Appointments](docs/screenshots/03-appointments.png) |
+| **Dashboard** — KPIs, today's schedule, bay utilization, job pipeline | **Appointments** — filter, inspect and act on every booking |
+| ![Booking wizard](docs/screenshots/04-booking-wizard.png) | ![Dark mode](docs/screenshots/05-dashboard-dark.png) |
+| **Booking wizard** — live quote while you pick services | **Dark mode** — one switch in the sidebar |
+| ![Customer portal](docs/screenshots/06-customer-portal.png) | |
+| **Customer portal** — customers sign in with their phone number | |
 
 And the receipt a customer walks away with (`receipts/receipt_0003.txt`):
 
@@ -206,14 +170,14 @@ Payment method : gcash
 ## 🧠 How It Works
 
 LustraDetail uses a **strict layered architecture**. Each layer may only talk to
-the one below it — which is exactly why the terminal UI can be swapped for a
-Tkinter GUI later **without touching a single business rule**:
+the one below it — which is exactly why the interface could be rebuilt from a
+terminal app into a Tkinter GUI **without touching a single business rule**:
 
 ```
 +-----------------------------------------------------+
 |  UI LAYER (app/ui)                                  |
-|  menus, ASCII art, prompts  -- the ONLY layer       |
-|  that prints or reads input                          |
+|  Tkinter windows, widgets, charts -- the ONLY layer |
+|  that draws on screen or reads input                 |
 +------------------------+----------------------------+
                          v
 +-----------------------------------------------------+
@@ -267,11 +231,15 @@ lustradetail/
 │   ├── storage/             # JSON store (atomic + .bak) and repositories
 │   ├── services/            # auth, catalog, customers, bookings, inventory,
 │   │                        # payments, reports, staff, demo seeding
-│   ├── ui/                  # terminal screens (swap target for Tkinter)
-│   └── utils/               # dates, validation, ASCII-safe formatting
+│   ├── ui/                  # Tkinter interface: theme, widgets, charts, splash,
+│   │   │                    # shell (sidebar), login, booking wizard, dialogs
+│   │   └── pages/           # dashboard, appointments, customers, catalog,
+│   │                        # inventory, reports, staff, customer portal
+│   └── utils/               # dates, validation, formatting
 ├── data/                    # JSON "database" (7 files, auto-created)
 ├── receipts/                # generated official receipts (.txt)
-├── tests/                   # pytest suite (business rules + storage)
+├── docs/screenshots/        # images used in this README
+├── tests/                   # pytest suite (business rules, storage, UI smoke test)
 └── .github/                 # CI workflow + issue/PR templates
 ```
 
@@ -327,25 +295,37 @@ The test suite runs automatically on every push via **GitHub Actions**
 
 ---
 
-## 🖥️ Roadmap: Tkinter GUI
+## 🖥️ The Tkinter Interface
 
-The terminal UI was built as a **deliberately replaceable layer**. Because:
+The whole front end lives in `app/ui/` and is built from **Tkinter and ttk only**
+— no Pillow, no customtkinter, nothing to install. Rounded cards, vector icons,
+charts and animations are drawn on `Canvas`.
 
-- every screen receives the same injected `stack` of services,
-- services never print or prompt (they raise typed exceptions),
-- models serialize themselves to plain dicts,
+| File | Role |
+|---|---|
+| `theme.py` | Light / dark palettes, named fonts, DPI scaling, saved preference (`.lustra_ui.json`) |
+| `widgets.py` | Buttons, cards, fields, tables, dialogs, toasts, date pickers |
+| `charts.py` | Bar chart, donut, gauge and ranked bar list |
+| `splash.py`, `brand.py` | Animated launch screen and the car illustration |
+| `shell.py` | Sidebar navigation, page header, role-based menus |
+| `login.py` | Staff / customer sign-in with lockout after 3 failed attempts |
+| `wizard.py`, `dialogs.py` | Booking wizard and the smaller modal forms |
+| `pages/` | One module per screen |
 
-...swapping in a Tkinter front end means rewriting **only `app/ui/`** —
-`build_stack()` in `app/application.py` stays byte-for-byte identical. The
+The architecture rules still hold: every screen receives the same injected
+`stack` of services, services never draw or prompt (they raise typed
+exceptions), and `build_stack()` in `app/application.py` is untouched. The
 JSON storage can later be traded for SQLite behind the same repository
-interfaces without touching the services either.
+interfaces without touching the services *or* the UI.
+
+Press **F11** to toggle fullscreen.
 
 ---
 
 ## 🤝 Contributing
 
 Pull requests are welcome! Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) for
-the layer rules (UI never contains logic, services never print) and the test
+the layer rules (UI never contains business logic, services never touch the screen) and the test
 requirements, and open an issue first for big changes.
 
 ---
@@ -355,5 +335,5 @@ requirements, and open an issue first for big changes.
 - **Ericksson Brutas** — [GitHub](https://github.com/ZEB3Z)
 - **Alwin Benitez** — [GitHub](https://github.com/alwincroissant)
 
-Made with soap, microfiber, and a lot of `print()` statements for our
+Made with soap, microfiber, and a lot of pixels for our
 programming finals project. 🚗✨

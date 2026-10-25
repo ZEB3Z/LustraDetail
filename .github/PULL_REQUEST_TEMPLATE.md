@@ -13,9 +13,9 @@ What does this PR change and why? Link the related issue
 ## Layer checklist
 
 - [ ] No business logic added to `app/ui` (screens only call services)
-- [ ] No `print()` / `input()` added to `app/services`
+- [ ] No `print()` / `input()` / `tkinter` imports added to `app/services`
 - [ ] No direct JSON file access outside `app/storage`
-- [ ] Terminal output stays pure ASCII
+- [ ] New screens look right in both light and dark themes
 
 ## Testing
 
@@ -23,6 +23,6 @@ What does this PR change and why? Link the related issue
 - [ ] Added/updated tests for the new behavior
 - [ ] Manually smoke-tested via `python main.py`
 
-## Screenshots (terminal output)
+## Screenshots
 
-Paste a sample of the terminal output showing the change.
+Add a screenshot of the changed screen (light and dark if relevant).

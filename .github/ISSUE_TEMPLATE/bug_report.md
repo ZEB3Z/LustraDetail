@@ -12,13 +12,13 @@ A clear, concise description of what went wrong.
 **Steps to reproduce**
 1. Run `python main.py`
 2. Log in as ...
-3. Choose ...
+3. Click ...
 
 **Expected behavior**
 What you expected to happen instead.
 
-**Screenshots / terminal output**
-Paste the relevant terminal output (it is our "screenshot").
+**Screenshots / error text**
+Attach a screenshot of the window, and paste any traceback printed in the terminal.
 
 **Environment**
  - OS: [e.g. Windows 11, Ubuntu 24.04]

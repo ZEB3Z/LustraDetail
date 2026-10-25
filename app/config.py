@@ -7,7 +7,7 @@ from pathlib import Path
 
 # ---------------------------------------------------------------- brand ----
 APP_NAME = "LustraDetail"
-APP_VERSION = "1.0.0"
+APP_VERSION = "1.1.0"
 SHOP_NAME = "LustraDetail Auto Care"
 SHOP_TAGLINE = "Drive in dirty. Drive out dazzling."
 SHOP_ADDRESS = "123 Shine Avenue, Quezon City, Philippines"

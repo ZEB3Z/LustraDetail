@@ -3,6 +3,30 @@
 All notable changes to LustraDetail are documented here.
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.1.0] - 2026
+
+### Changed
+- Replaced the terminal UI with a desktop interface built on pure
+  Tkinter/ttk (still zero third-party dependencies). Services, storage,
+  models and tests are untouched.
+
+### Added
+- Animated splash screen and a branded login screen with demo-account chips
+  and a 15-second lockout after 3 failed attempts.
+- Sidebar navigation with role-gated menus (admin / cashier / detailer and
+  the customer portal), live clock and badge counts.
+- Dashboard with KPI cards, today's schedule, bay-utilization gauge, job
+  pipeline donut, 7-day revenue chart, top services and low-stock list.
+- Light and dark themes with a sidebar toggle, remembered in
+  `.lustra_ui.json`.
+- Five-step booking wizard with a live quote panel, plus modal forms for
+  checkout, reschedule, restock, registration and staff.
+- HiDPI awareness on Windows, F11 fullscreen, and a friendly message when
+  Tkinter is missing.
+
+### Removed
+- The ASCII terminal screens (`app/ui/terminal.py` and friends).
+
 ## [1.0.0] - 2025
 
 ### Added

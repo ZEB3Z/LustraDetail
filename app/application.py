@@ -1,14 +1,13 @@
-"""Application wiring: builds the object graph and starts the terminal UI.
+"""Application wiring: builds the object graph and starts the Tkinter UI.
 
-The UI only ever receives this `stack` object, which is exactly what will
-let us swap the terminal UI for a Tkinter one later without touching any
-business logic: build_stack() stays identical, only run() changes.
+The UI only ever receives this `stack` object, so build_stack() stays
+identical no matter which front end sits on top of it.
 """
 import sys
 from types import SimpleNamespace
 
 USAGE = """
-LustraDetail Auto Care - a terminal-based auto detailing management system.
+LustraDetail Auto Care - a desktop auto detailing management system (Tkinter).
 
 Usage:
     python main.py              Start the application.
@@ -67,8 +66,17 @@ def main():
 
     stack = build_stack()
 
+    try:
+        import tkinter  # noqa: F401
+    except ImportError:
+        print("\n  Tkinter is not installed for this Python.\n"
+              "  Windows/macOS: reinstall Python from python.org with the 'tcl/tk' option ticked.\n"
+              "  Debian/Ubuntu: sudo apt install python3-tk\n"
+              "  Fedora:        sudo dnf install python3-tkinter\n")
+        sys.exit(1)
+
     from app.ui.app_ui import run
     try:
         run(stack)
     except KeyboardInterrupt:
-        print("\n\n  [!] Interrupted. Goodbye!")
+        print("\n  Interrupted. Goodbye!")
